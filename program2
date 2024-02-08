@@ -1,0 +1,20 @@
+# program 2:- Define a class named Shape and its subclass Square . The Square class has an init function
+# which takes length as argument . Both classes have an area function which can print the area of the Shape
+# where Shape area is 0 by default.
+
+class Shape:
+    def area(self=0):
+        print("it has 0 value by default")
+        
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+    def area(self):
+        print("Output of Square1.area() is ", self.length * self.length)
+
+Square1 = Square()
+Square1.area()
+
+Shape1 = Shape()
+Shape1.area()
