@@ -1,1 +1,16 @@
+# Program 1:- Write a program to compute a frequency of the words from the input
+#the output should output after sorting the key alphanumerically
+import operator
+input_data = "which is better python 2 or python 3"
+list1 = input_data.split(" ")
+my_dict = {}
+for data in list1:
+    if data in my_dict:
+        my_dict[data] = my_dict[data] + 1
+    else:
+        my_dict[data] = 1
+
+result = sorted(my_dict.items(), key=operator.itemgetter(0))
+print(result)
+
 
